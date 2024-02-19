@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:navigation_demo/second_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -27,6 +28,16 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Navigation Transitions'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const SecondScreen(),
+              ));
+            },
+            icon: const Icon(Icons.airline_stops),
+          )
+        ],
       ),
       body: ListView.separated(
         separatorBuilder: (context, index) => const SizedBox(height: 10),
@@ -83,4 +94,3 @@ class DestinationScreen extends StatelessWidget {
     );
   }
 }
-
