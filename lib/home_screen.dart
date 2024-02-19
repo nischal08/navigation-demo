@@ -57,7 +57,6 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-// Define your next pages here (replace with your actual content)
 class DestinationScreen extends StatelessWidget {
   final String title;
   const DestinationScreen({super.key, required this.title});
@@ -73,7 +72,8 @@ class DestinationScreen extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          'You navigated using $title transistion animation.',
+          'You navigated using $title animation.',
+          textAlign: TextAlign.center,
           style: const TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.w500,
@@ -84,4 +84,3 @@ class DestinationScreen extends StatelessWidget {
   }
 }
 
-// ... Add similar widget definitions for other pages: LeftToRightPage, FadePage, CustomPage, ZoomPage, SlideUpPage
