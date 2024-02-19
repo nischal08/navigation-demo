@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
             onPressed: () => Get.to(
               () => DestinationScreen(title: uiList[index].name.capitalize!),
               transition: uiList[index],
-              duration: const Duration(milliseconds: 1000),
+              duration: const Duration(milliseconds: 800),
             ),
             style: ButtonStyle(
               shape: MaterialStateProperty.all(
