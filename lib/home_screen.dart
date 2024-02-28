@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:navigation_demo/animated_circle.dart';
 import 'package:navigation_demo/second_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -36,6 +37,17 @@ class HomeScreen extends StatelessWidget {
               ));
             },
             icon: const Icon(Icons.airline_stops),
+          ),
+          const SizedBox(
+            width: 8,
+          ),
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const AnimatedCircle(),
+              ));
+            },
+            icon: const Icon(Icons.repeat),
           )
         ],
       ),
