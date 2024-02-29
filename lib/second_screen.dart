@@ -1,10 +1,11 @@
-import 'dart:math';
+import 'dart:developer';
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
 class ShakeCurve extends Curve {
   @override
-  double transform(double t) => sin(t * pi * 2);
+  double transform(double t) => math.sin(t * math.pi * 2);
 }
 
 class SecondScreen extends StatefulWidget {
@@ -134,25 +135,25 @@ class AnimatedTweenContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
-      animation: animation,
-      builder: (context,_) {
-        return Transform.scale(
-          scale: 1 + animation.value,
-          child:
-              // Opacity(
-              // opacity: _opacityTween.evaluate(animation),
-              // child:
-              Container(
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
+        animation: animation,
+        builder: (context, _) {
+          log("animation.value.toString()");
+          return Transform.scale(
+            scale: 1 + animation.value,
+            child:
+                // Opacity(
+                // opacity: _opacityTween.evaluate(animation),
+                // child:
+                Container(
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white,
+              ),
+              height: 100,
+              width: 100,
             ),
-            height: 100,
-            width: 100,
-          ),
-          // ),
-        );
-      }
-    );
+            // ),
+          );
+        });
   }
 }
